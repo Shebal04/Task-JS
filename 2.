@@ -1,0 +1,19 @@
+function moveZerosToEnd(input) {
+  let a=input.split(",").map(Number);
+  let b=new Array();                         
+  let c=0;                           
+  for (let i=0;i<a.length;i++){
+    if(a[i]!=0){
+      b.push(a[i]);
+    }else{
+      c++; 
+    }
+  }
+  for(let i=0;i<c;i++){
+    b.push(0);
+  }
+  console.log(b);
+  console.log("count:",c);
+}
+let line=prompt("Enter numbers separated by ,:");
+let result=moveZerosToEnd(line);
